@@ -1,0 +1,7 @@
+# Resultado de clasificacion de areas de prueba
+#  1 del  7 de 2009 a las 14:57
+
+
+num_datos =    0
+
+

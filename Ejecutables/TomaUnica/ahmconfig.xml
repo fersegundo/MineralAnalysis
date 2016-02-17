@@ -1,0 +1,247 @@
+<configurations>
+
+    <!-- low bauds -->
+
+    <unit name="DM4000-COM1" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <unit name="serial1" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM1"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+    <unit name="DM4000-COM2" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <unit name="serial2" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM2"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+    <unit name="DM4500-COM1" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <unit name="serial3" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM1"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+    <unit name="DM4500-COM2" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <unit name="serial4" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM2"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+    <unit name="DM5000-COM1" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <unit name="serial5" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM1"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+    <unit name="DM5000-COM2" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <unit name="serial6" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM2"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+    <!-- high bauds -->
+
+
+    <unit name="DM5500-COM1" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <driver-config baudrate="57600"/>
+            <unit name="serial7" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM1"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+
+    <unit name="DM5500-COM2" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <driver-config baudrate="57600"/>
+            <unit name="serial8" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM2"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+
+    <unit name="DM6000-COM1" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <driver-config baudrate="57600"/>
+            <unit name="serial9" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM1"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+
+    <unit name="DM6000-COM2" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <driver-config baudrate="57600"/>
+            <unit name="serial10" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM2"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+
+    <unit name="DMI4000-COM1" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <driver-config baudrate="57600"/>
+            <unit name="serial11" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM1"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+
+    <unit name="DMI4000-COM2" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <driver-config baudrate="57600"/>
+            <unit name="serial12" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM2"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+
+    <unit name="DMI5000-COM1" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <driver-config baudrate="57600"/>
+            <unit name="serial13" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM1"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+
+    <unit name="DMI5000-COM2" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <driver-config baudrate="57600"/>
+            <unit name="serial14" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM2"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+
+    <unit name="DMI6000-COM1" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <driver-config baudrate="57600"/>
+            <unit name="serial15" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM1"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+
+    <unit name="DMI6000-COM2" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <driver-config baudrate="57600"/>
+            <unit name="serial16" id="CM-SERIAL-COMMUNICATION-II" driver="cmserial2.dll">
+                <parameters>
+                    <serial-config comport="COM2"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+
+
+    <!-- usb -->
+
+    <unit name="DM3000-USB" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <unit name="usb17" id="CM-SERIAL-COMMUNICATION-II" driver="cmusb.dll">
+                <parameters>
+                    <usb-config usbport="usb*"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+    <unit name="DMI4000-USB" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <unit name="usb18" id="CM-SERIAL-COMMUNICATION-II" driver="cmusb.dll">
+                <parameters>
+                    <usb-config usbport="usb*"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+    <unit name="DMI5000-USB" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <unit name="usb19" id="CM-SERIAL-COMMUNICATION-II" driver="cmusb.dll">
+                <parameters>
+                    <usb-config usbport="usb*"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+    <unit name="DMI6000-USB" id="MICROSCOPE" driver="valentine.dll">
+        <parameters>
+            <unit name="usb20" id="CM-SERIAL-COMMUNICATION-II" driver="cmusb.dll">
+                <parameters>
+                    <usb-config usbport="usb*"/>
+                </parameters>
+            </unit>
+        </parameters>
+    </unit>
+    <!-- DEMO DM6000B -->
+
+    <unit name="DEMO-DM6000B" id="MICROSCOPE" detect="*" driver="cmemulator.dll">
+        <parameters>
+            <jupiter-config stand="DM6000B" filedirectory="." >
+                <nosepiece size="7" />
+            </jupiter-config>
+            <unit name="persist" id="9999" detect="*" driver="ahmpersist.dll"/>
+        </parameters>
+    </unit>
+
+    <!-- DEMO DMI6000B -->
+
+    <unit name="DEMO-DMI6000B" id="MICROSCOPE" detect="*" driver="cmemulator.dll">
+        <parameters>
+            <jupiter-config stand="DMI6000B" filedirectory="." >
+            </jupiter-config>
+            <unit name="persist" id="9999" detect="*" driver="ahmpersist.dll"/>
+        </parameters>
+    </unit>
+
+</configurations>

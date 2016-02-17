@@ -1,0 +1,302 @@
+# Archivo de descripción de minerales. Usar GestionMinerales para su edición.
+
+[ag]
+activo = 1
+identificador = 1
+nombre = Plata_nativa
+indice = 225
+RGB = 211 228 233
+
+[asp]
+activo = 1
+identificador = 2
+nombre = Arsenopirita
+indice = 130
+RGB = 127 131 132
+
+[arg]
+activo = 1
+identificador = 3
+nombre = Argentita/Acantita
+indice = 81
+RGB = 87 82 76
+
+[au]
+activo = 1
+identificador = 4
+nombre = Oro_nativo
+indice = 210
+RGB = 0 0 0
+
+[bm]
+activo = 1
+identificador = 7
+nombre = Bismutina
+indice = 93
+RGB = 95 92 90
+
+[bn]
+activo = 1
+identificador = 8
+nombre = Bornita
+indice = 53
+RGB = 55 46 58
+
+[cin]
+activo = 1
+identificador = 10
+nombre = Cinabrio
+indice = 73
+RGB = 76 68 66
+
+[cbn]
+activo = 1
+identificador = 11
+nombre = Cubanita
+indice = 85
+RGB = 67 93 103
+
+[ccp]
+activo = 1
+identificador = 12
+nombre = Calcopirita
+indice = 87
+RGB = 60 103 113
+
+[chr]
+activo = 1
+identificador = 13
+nombre = Cromita
+indice = 31
+RGB = 32 31 30
+
+[cs]
+activo = 1
+identificador = 14
+nombre = Casiterita
+indice = 30
+RGB = 32 31 30
+
+[cc]
+activo = 1
+identificador = 15
+nombre = Calcosina
+indice = 70
+RGB = 76 70 63
+
+[cup]
+activo = 1
+identificador = 17
+nombre = Cuprita
+indice = 75
+RGB = 81 72 63
+
+[cv]
+activo = 1
+identificador = 18
+nombre = Covellina
+indice = 40
+RGB = 52 35 27
+
+[dg]
+activo = 1
+identificador = 19
+nombre = Digenita
+indice = 71
+RGB = 76 70 63
+
+[en]
+activo = 1
+identificador = 20
+nombre = Enargita
+indice = 69
+RGB = 71 68 70
+
+[gn]
+activo = 1
+identificador = 22
+nombre = Galena
+indice = 110
+RGB = 120 108 105
+
+[gth]
+activo = 1
+identificador = 23
+nombre = Goethita
+indice = 41
+RGB = 43 38 36
+
+[ht]
+activo = 1
+identificador = 25
+nombre = Hematites
+indice = 66
+RGB = 70 67 60
+
+[il]
+activo = 1
+identificador = 26
+nombre = Ilmenita
+indice = 46
+RGB = 48 43 45
+
+[ln]
+activo = 1
+identificador = 28
+nombre = Linneita
+indice = 76
+RGB = 0 0 0
+
+[ln-pm]
+activo = 1
+identificador = 29
+nombre = Linneita_polydimita
+indice = 72
+RGB = 0 0 0
+
+[ln-vl]
+activo = 1
+identificador = 30
+nombre = Linneita_violarita
+indice = 74
+RGB = 0 0 0
+
+[mc]
+activo = 1
+identificador = 32
+nombre = Marcasita
+indice = 124
+RGB = 113 127 126
+
+[mg]
+activo = 1
+identificador = 33
+nombre = Magnetita
+indice = 47
+RGB = 48 47 47
+
+[mo]
+activo = 1
+identificador = 36
+nombre = Molibdenita
+indice = 56
+RGB = 58 55 55
+
+[nc]
+activo = 1
+identificador = 37
+nombre = Niquelina
+indice = 122
+RGB = 103 118 143
+
+[pn]
+activo = 1
+identificador = 38
+nombre = Pentlandita
+indice = 95
+RGB = 87 110 122
+
+[po]
+activo = 1
+identificador = 39
+nombre = Pirrotita
+indice = 92
+RGB = 81 95 105
+
+[prl]
+activo = 1
+identificador = 40
+nombre = Pirolusita
+indice = 78
+RGB = 77 80 77
+
+[psi]
+activo = 1
+identificador = 41
+nombre = Psilomelana
+indice = 61
+RGB = 65 62 58
+
+[pt]
+activo = 1
+identificador = 42
+nombre = Platino_nativo
+indice = 161
+RGB = 153 163 168
+
+[py]
+activo = 1
+identificador = 43
+nombre = Pirita
+indice = 121
+RGB = 103 126 133
+
+[rt]
+activo = 1
+identificador = 45
+nombre = Rutilo
+indice = 58
+RGB = 62 57 55
+
+[sp]
+activo = 1
+identificador = 47
+nombre = Esfalerita
+indice = 45
+RGB = 48 45 43
+
+[sbt]
+activo = 1
+identificador = 49
+nombre = Estibina
+indice = 79
+RGB = 83 78 77
+
+[td]
+activo = 1
+identificador = 51
+nombre = Tetrahedrita
+indice = 68
+RGB = 68 71 68
+
+[urn]
+activo = 1
+identificador = 53
+nombre = Uraninita
+indice = 133
+RGB = 0 0 0
+
+[wf]
+activo = 1
+identificador = 55
+nombre = Wolframita
+indice = 44
+RGB = 46 45 43
+
+[q]
+activo = 1
+identificador = 56
+nombre = Cuarzo
+indice = 3
+RGB = 0 0 0
+
+[carb]
+activo = 1
+identificador = 57
+nombre = Carbonatos
+indice = 2
+RGB = 0 0 0
+
+[marc]
+activo = 1
+identificador = 58
+nombre = Mins_Arcillosos
+indice = 1
+RGB = 0 0 0
+
+[res]
+activo = 1
+identificador = 59
+nombre = Resina
+indice = 0
+RGB = 0 0 0

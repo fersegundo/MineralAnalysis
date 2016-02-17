@@ -1,0 +1,85 @@
+DESCRIPCION PROYECTOS
+
+TomaPatron
+---------------------------
+Aplicacion de CONSOLA 
+Mediante el microscopio Leica o Zeiss, realiza la calibracion del sistema .
+La calibracion del sistema consiste en, para cada objetivo a calibrar:
+- Ajuste automático de las exposiciones con las que deberá tomar la camara Basler en cada uno de los filtros para que, dada una intensidad de luz, se obtenga una reflectancia media identica a el patron de alta reflectancia.
+- Ajuste automatico de las diferencias de enfoque para cada uno de los filtros. Para ello se debe usar cualquier muestra con un alto contraste.
+- Obtención de una imagen del patron de alta reflectancia. 
+- Obtención de una imagen del patron de baja reflectancia. 
+- Correccion geométrica de las ligeras diferencias en cuanto a posición y escala de cada uno de los filtros. Además, se realiza una corrección de rotación de la cámara, de tal manera que la imagen objetivo quede siempre alineada con el eje de la pletina motorizada. Para todo ello se usa un patron Polka-Dot.
+
+TomaUnica
+---------------------------
+Aplicacion de CONSOLA
+Mediante el microscopio Leica o Zeiss, captura y corrige (mediante las imagenes de los patrones) una serie de imagenes
+
+TomaAuto
+---------------------------
+Mediante el microscopio, permite realizar barridos (corrigiendo las imagenes) y componer mosaicos de dichos barridos. Se genera un archivo con información básica del barrido (para poder usarlo en ClasificaBarrido)
+
+Analisis
+---------------------------
+Herramienta que permite observar una imagen multiespectral, navegar a través de un barrido y componer imagenes en falso color. También permite seleccionar areas de interés (que se pueden guardar para futuras sesiones), presentando histogramas y perfiles de reflectancia y pudiendo el usuario identificar a que mineral pertenece cada area (guardándose un fichero de clasificacion <*.cla> y otro de pixeles <*.pix>)
+De esta manera, Analisis pretende ser una herramienta para preparar una base de datos con perfiles de reflectancia. 
+
+Al guardar las areas de interés, es posible usar Analisis por CONSOLA, pásandole como argumento un directorio y Analisis recorerá automáticamente todas las imágenes con informacion de áreas de interés de ese directorio (y subdirectorios). Con esto se pretende dotar a la herramienta de una manera de regenerar la información de clasificación y de información de pixels automáticamente para cada una de las areas.
+
+Además, si se dispone de un fichero de entrenamiento (mediante la aplicacion EntrenaPixels), Analisis es capaz de clasificar automáticamente tanto zonas de interés (guardando un archivo de resultados de clasificacion que se puede usar para verificar la bondad de la clasificación, ver RecopilaDatosClasificacion) como la imágen completa, presentando en este último caso una imagen en falso color (que pretende simular el color real de cada mineral) de los minerales clasificados y una lista con el porcentaje de aparación de cada uno de ellos.
+
+ClasificaBarrido
+---------------------------
+Este proyecto se encuentra en el mismo directorio que Analisis porque comparte gran parte de su código.
+Esta herramienta busca un archivo de información de barrido en un directorio dado y clasifica una a una todas las imagenes completas pertenecientes a ese barrido y muestra un informe de clasificación único para el conjunto del barrido.
+
+RecopilaDatosPixels
+---------------------------
+Aplicacion de CONSOLA
+Recopila la información de PIXELS creada por la herramienta de Analisis en un directorio (y subdirectorios) dado, generando un único archivo con la información de todos los pixels
+Este archivo único de pixels se usará para entrenar el sistema (ver EntrenaPixels)
+
+DivideDatos
+---------------------------
+Aplicación de CONSOLA
+Permite, si fuese necesario, dividir en dos un archivo de PIXELS dado un porcentaje. Se dividen areas completas, quedando todos los pixels de un area en un archivo u otro. Util para realizar pruebas de clasificación entrenando con parte de los pixeles y probando con el resto.
+
+EntrenaPixels
+--------------------------
+Aplicación de CONSOLA
+A partir de un fichero de recopilación de pixles (generado por RecopilaDatosPixels), realiza el entrenamiento del sistema, generando un fichero de entrenamiento (*.mah) con toda la información necesaria para poder clasificar minerales (tabla de relación entre nivel de gris promedio e índices de posibles minerales a clasificar, nivel de gris medio, mínimo, máximo y matriz invertida de mahalanobis para cada mineral.
+
+PruebaPixels
+--------------------------
+A partir de un archivo de recopilación de pixels (típicamente generado por DivideDatos) y un archivo de entrenamiento (generado por EntrenaPixels), se clasifican todos los pixels de todas las areas del fichero de recopilacion de pixels y se genera un archivo de resultados de clasificación. La informacón de clasificación consiste de una lista de minerales y número de pixels para cada una de las areas. Este fichero único de resultandos de clasificación puede auditarse directamente importándolo en una plantilla de Excel que se encuentra en el mismo directorio "PruebaPixels"
+
+
+** NOTA SOBRE EL ENTRENAMIENTO CON ZONAS: El entrenamiento con zonas queda obsoleto al comprobarse claramente superado por el entrenamiento con pixels individuales. Sin embargo, se han conservado algunos proyectos que trabajaban con zonas: RecopilaDatos, RecopilaDatosClasificacion y AnalisiZ.
+
+RecopilaDatos **
+---------------------------
+Aplicacion de CONSOLA
+OBSOLETO (ya no se recopilan zonas, si no todos los pixels, ver RecopilaDatosPixels)
+Recopila la información de ZONAS creada por la herramienta de Analisis en un directorio (y subdirectorios) dado, generando un único archivo con la información de todas las areas (reflectancia moda y percentiles).
+Este archivo único de zonas se puede usar para que AnalisiZ entrene el sistema
+
+RecopilaDatosClasificacion **
+---------------------------
+Aplicación de CONSOLA
+OBSOLETO (ya no se recopila resultados de clasificacion de zonas, si no de pixels, ver PruebaPixels)
+Recopila los resultandos de clasificación creada por la herramienta de Analisis de un directorio (y subdirectorios) dado, generando un único archivo de resultados de clasificación de todas las areas. La informacón de clasificación consiste de una lista de minerales y número de pixels para cada una de las areas.
+Este fichero único de resultandos de clasificación puede auditarse directamente importándolo en una plantilla de Excel que se encuentra en el mismo directorio "RecopilaDatosClasificacion"
+
+AnalisiZ **
+----------------------------
+Versión obsoleta de Analisis que realiza el entrenamiento a partir de un fichero con información de zonas (en vez de cargar el fichero de entrenamiento pre-entrenado). Esta versión se conserva excusivamente para poder generar el fichero de entrenamiento a partir de areas y poder así realizar pruebas mediante PruebaPixels.
+
+
+
+DEPENDENCIAS DE PROYECTOS
+
+TomaPatron, TomaUnica y TomaAuto dependen de las librerias: (ProcesoAux *, LibBarrido, ControlRevolver,ControlDisp,ControlMicroscopio)
+Analisis depende de las librerias: (ProcesoAux *)
+
+* ProcesoAux se compila en \Librerias\Lib\ como todas las librerias. Ha de compilarse con la opcion "Use MFC in a Shared DLL" para los proyectos basado en ventanas (Analisis y TomaAuto) y con "Use MFC in a static library" para los proyectos basados en consola (TomaPatron y TomaUnica). Esta Opción, con Visual Studio esta en "Project Settings" -> pestaña "General" -> campo "Microsoft Foundation Clases".
